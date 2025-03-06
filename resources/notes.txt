@@ -1,0 +1,8 @@
+https://www.w3schools.com/bootstrap/default.asp
+
+https://cupcakeipsum.com/
+
+To find examples of structural elemets, Google "bootstrap *element*" 
+Examples:
+1. footer bootstrap: https://getbootstrap.com/docs/5.0/examples/headers/
+2. header bootstrap: https://getbootstrap.com/docs/5.3/examples/footers/
