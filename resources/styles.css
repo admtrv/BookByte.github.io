@@ -1,3 +1,6 @@
+@import url('https://fonts.cdnfonts.com/css/tabac-sans');
+
+
 html, body {
     height: 100%;
 }
@@ -11,10 +14,11 @@ html, body {
     padding-top: 60px;
 }
 .footer {
-    background-color: #343a40;
+    background-color: #212529;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding-left: 40px;
+
 }
 .header {
     position: fixed;
@@ -23,4 +27,11 @@ html, body {
     width: 100%;
     background-color: #343a40;
     z-index: 1030;
+}
+
+.w_footer_button{
+    background: transparent;
+    outline: None;
+    border: none;
+    color: white;
 }
