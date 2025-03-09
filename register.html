@@ -20,13 +20,17 @@
        <hr>
        <ul class="list-inline d-flex align-items-center justify-content-center">
             <li class="list-inline-item me-3">
-                <h4 class="fw-bold">Login</h4>
+                <h4 class="fw-bold">Register</h4>
             </li>
         </ul>   
 
         <div class="container d-flex justify-content-center">
             <div class="w-50"> <!-- Adjust width as needed -->
                 <form>
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control border border-2 border-dark" id="firstName" placeholder="Enter your first name" required>
+                    </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
                         <input type="email" class="form-control border border-2 border-dark" id="email" placeholder="Enter your email" required>
@@ -35,7 +39,11 @@
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control border border-2 border-dark" id="password" placeholder="Enter your password" required>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100 btn-dark mb-3">Login</button>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control border border-2 border-dark" id="confirmPassword" placeholder="Confirm your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-dark w-100 mb-3">Register</button>
                 </form>
                 <hr class="border border-black">
             </div>            
@@ -57,7 +65,7 @@
         </ul> 
         
         <p class="text-center mt-5">
-            <a href="#" class="text-decoration-none text-dark">Don't have an account? <strong>Register here!</strong></a>
+            <a href="#" class="text-decoration-none text-dark">Already have an account? <strong>Log In here!</strong></a>
         </p>
     
         
