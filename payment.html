@@ -9,8 +9,6 @@
     <title>Payment</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.js"></script>
     <link rel="stylesheet" href="resources/styles/custom.css">
 </head>
 
@@ -43,7 +41,43 @@
                     </li>
                 </ol>
             </nav>
+        </div>
 
+        <!-- Payment Methods -->
+        <div class="mt-4">
+            <div class="list-group">
+
+                <!-- Card Payment -->
+                <label class="list-group-item d-flex justify-content-between align-items-center fs-5 py-3">
+                    <div class="d-flex align-items-center">
+                        <input type="radio" name="paymentMethod" class="form-check-input me-3" value="card" checked>
+                        Pay by Card
+                    </div>
+                    <span class="text-muted">No Charge</span>
+                </label>
+
+                <!-- Cash on Delivery -->
+                <label class="list-group-item d-flex justify-content-between align-items-center fs-5 py-3">
+                    <div class="d-flex align-items-center">
+                        <input type="radio" name="paymentMethod" class="form-check-input me-3" value="cash">
+                        Cash on Delivery
+                    </div>
+                    <span class="fw-bold">1.50€</span>
+                </label>
+
+                <!-- Online Payment -->
+                <label class="list-group-item d-flex justify-content-between align-items-center fs-5 py-3">
+                    <div class="d-flex align-items-center">
+                        <input type="radio" name="paymentMethod" class="form-check-input me-3" value="online">
+                        Online Payment
+                    </div>
+                    <div class="d-flex justify-content-end flex-grow-1">
+                        <span class="fw-bold me-3"><i class="bi bi-google"></i> Pay</span>
+                        <span class="fw-bold"><i class="bi bi-apple"></i> Pay</span>
+                        <span class="text-muted ms-4">No Charge</span>
+                    </div>
+                </label>
+            </div>
         </div>
 
         <!-- Continue -->
