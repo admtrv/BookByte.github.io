@@ -190,3 +190,7 @@ p, span, li, a {
     border-color: inherit !important;
     color: inherit !important;
 }
+
+.noUi-connect {
+    background: var(--primary);
+}
