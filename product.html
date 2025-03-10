@@ -1,4 +1,4 @@
-<!-- index.html -->
+<!-- product.html -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +37,7 @@
                         <a href="all-products.html" class="text-decoration-none text-dark"> All Books
                         </a>
                     </li>
-                    
+
                     <li class="breadcrumb-item active text-muted" aria-current="page">
                         Book
                     </li>
@@ -49,9 +49,35 @@
         <div class="container  pt-3">
             <div class="row align-items-center">
 
-                <!-- Image -->
+                <!-- Image Carousel -->
                 <div class="col-md-4 text-center">
-                    <img src="resources/images/book.jpg" class="img-fluid w-100 rounded shadow-sm" alt="Book Cover">
+                    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="resources/images/book.jpg" class="img-fluid w-100 rounded shadow-sm"
+                                    alt="Book Cover">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="resources/images/book.jpg" class="img-fluid w-100 rounded shadow-sm"
+                                    alt="Book Cover Back">
+                            </div>
+                        </div>
+
+                        <!-- Navigation -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"
+                                style="filter: invert(1);"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"
+                                style="filter: invert(1);"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+
+                    </div>
                 </div>
 
                 <div class="col-md-8">
