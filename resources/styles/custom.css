@@ -191,6 +191,15 @@ p, span, li, a {
     color: inherit !important;
 }
 
+.border-light {
+    border-color: var(--primary) !important;
+}
+
+.border-dark {
+    border-color: var(--secondary) !important;
+}
+
+
 .noUi-connect {
     background: var(--primary);
 }
