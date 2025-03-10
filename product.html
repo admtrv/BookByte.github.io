@@ -6,8 +6,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Book E-shop</title>
+    <title>Product</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="resources/styles/custom.css">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -17,86 +19,92 @@
 
     <!-- Main Content -->
     <main class="container flex-fill mt-5 pt-4">
-        <hr>
-        <ul class="list-inline m-0 p-0 d-flex align-items-center">
-            <li class="list-inline-item me-3">
-                <a href="your-link-here" class="text-decoration-none text-dark"></a>
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-                    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
-                </svg>
-            </li>
-            <li class="list-inline-item me-3 fs-4 fw-bold">
-                
-                >
-            </li>
-            <li class="list-inline-item fs-4 fw-bold">
-                <a href="your-link-here" class="text-decoration-none text-dark"></a>
-                <p class="mb-0 text-wrap" style="max-width: 200px;">All products</p>
-            </li>
-            <li class="list-inline-item me-3 fs-4 fw-bold">
-                >
-            </li>
-            <li class="list-inline-item fs-4 fw-bold">
-                <a href="your-link-here" class="text-decoration-none text-dark"></a>
-                <p class="mb-0 text-wrap" style="max-width: 200px;">{{Title}}</p>
-            </li>
-        </ul>   
-        
-      
+
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="index.html" class="text-decoration-none text-dark">
+                        <i class="bi bi-house-door-fill"></i> Home
+                    </a>
+                </li>
+
+                <li class="breadcrumb-item">
+                    <a href="all-products.html" class="text-decoration-none text-dark">All Books</a>
+                </li>
+
+                <li class="breadcrumb-item active text-muted" aria-current="page">
+                    Book
+                </li>
+            </ol>
+        </nav>
+
         <div class="container  pt-3">
             <div class="row align-items-center">
-                <div class="col-md-4">
-                    <svg cxmlns="http://www.w3.org/2000/svg" width="220" height="220" fill="currentColor" class="bi bi-book ms-5 ps-2" viewBox="0 0 16 16">
-                        <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
-                      </svg>
+
+                <!-- Image -->
+                <div class="col-md-4 text-center">
+                    <img src="resources/images/book.jpg" class="img-fluid w-100 rounded shadow-sm" alt="Book Cover">
                 </div>
+
                 <div class="col-md-8">
-                    <h2 class="fw-bold">Title</h2>
-                    <h3 class="">Author</h3>
 
-                    <ul class="list-inline d-flex align-items-center">
-                        <li class="list-inline-item me-3">
-                            <h4>Genre</h4>
-                        </li>
-                        <li class="list-inline-item me-3">
-                            <h4>Language</h4>
-                        </li>
-                    </ul>   
+                    <!-- Book -->
+                    <h1 class="fw-bold text-dark">Book</h1>
 
+                    <!-- Author -->
+                    <h3 class="text-muted">Author</h3>
+
+                    <!-- Tags -->
+                    <div class="d-flex flex-wrap">
+                        <h5 class="text-dark me-3">Genre</h5>
+                        <h5 class="text-dark">Language</h5>
+                    </div>
 
                     <hr>
+
+                    <!-- Description -->
                     <p class="text-muted">
-                        This is a sample text section where you can describe something related to the image. 
+                        This is a sample text section where you can describe something related to the image.
                         You can make this text longer or shorter depending on the content.
-                        Cupcake ipsum dolor sit amet marzipan sweet cheesecake. Gingerbread gummi bears jujubes macaroon muffin dragée powder chocolate cake. Candy brownie caramels liquorice icing. Chocolate bar marzipan jujubes lemon drops muffin icing. Cake pudding oat cake sesame snaps croissant icing pastry. Cotton candy chocolate cake sweet lemon drops I love jelly-o.
+                        Cupcake ipsum dolor sit amet marzipan sweet cheesecake. Gingerbread gummi bears jujubes macaroon
+                        muffin dragée powder chocolate cake. Candy brownie caramels liquorice icing. Chocolate bar
+                        marzipan jujubes lemon drops muffin icing. Cake pudding oat cake sesame snaps croissant icing
+                        pastry. Cotton candy chocolate cake sweet lemon drops I love jelly-o.
                     </p>
 
                     <ul class="list-inline mt-5 pt-4 d-flex align-items-center">
+
+                        <!-- Price -->
                         <li class="list-inline-item me-5">
-                            <h3 class="fw-bold">113,89€</h3>
+                            <h3 class="text-primary fw-bold">12,51€</h3>
                         </li>
-                        <li class="list-inline-item me-5">
+
+                        <!-- In Stock -->
+                        <li class="text-dark list-inline-item me-5">
                             <h6>In Stock > 10 pcs</h6>
                         </li>
 
+                        <!-- Add to Cart -->
                         <li class="list-inline-item ms-5 ps-5">
-                            <a href="#" class="btn btn-dark">Add to cart       <i class="fas fa-shopping-cart"></i></a>
-                            
+                            <a href="#" class="btn btn-dark">
+                                Add to Cart <i class="fas fa-shopping-cart ms-2"></i>
+                            </a>
                         </li>
 
-                    </ul>  
-                </div>  
+                    </ul>
+                </div>
             </div>
         </div>
-    
-        
+
+
     </main>
 
     <!-- Footer -->
     <div id="footer"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="resources/script.js"></script>
+    <script src="resources/scripts/load.js"></script>
 </body>
 
 </html>
