@@ -18,95 +18,109 @@
     <div id="header"></div>
 
     <!-- Main Content -->
-    <main class="container flex-fill mt-5">
+    <main class="container flex-fill mt-5 pt-4">
 
         <hr>
+
+        <div class="d-flex justify-content-between align-items-center mb-2">
+
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb" class="mt-0">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="index.html" class="text-decoration-none text-dark">
+                            <i class="bi bi-house-door-fill"></i> Home
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active text-muted" aria-current="page">
+                        All Books
+                    </li>
+                </ol>
+            </nav>
+
+            <!-- Ordering -->
+            <div class="d-flex align-items-center">
+                <h5 class="fw-bold me-2 mb-0">Order by</h5>
+                <select class="form-select w-auto" id="sortSelect">
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="bestsellers">Bestsellers</option>
+                    <option value="newest">Newest</option>
+                </select>
+            </div>
+        </div>
+
 
         <div class="row">
             <!-- Filters -->
 
-            <hr>
-
             <aside class="col-md-3 pe-5">
                 <h3 class="fw-bold">Filters</h4>
 
-                <!-- Price -->
-                <div class="mb-3">
-                    <h5 class="fw-bold">Price</h6>
-                    <div id="priceSlider"></div>
-                    <div class="d-flex justify-content-between mt-2">
-                        <span id="priceMinLabel">3€</span>
-                        <span id="priceMaxLabel">42€</span>
+                    <!-- Price -->
+                    <div class="mb-3">
+                        <h5 class="fw-bold">Price</h6>
+                            <div id="priceSlider"></div>
+                            <div class="d-flex justify-content-between mt-2">
+                                <span id="priceMinLabel">3€</span>
+                                <span id="priceMaxLabel">42€</span>
+                            </div>
                     </div>
-                </div>
 
-                <!-- Genres -->
-                <div class="mb-3">
-                    <h5 class="fw-bold">Genre</h6>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="genre1">
-                        <label class="form-check-label" for="genre1">Fiction</label>
+                    <!-- Genres -->
+                    <div class="mb-3">
+                        <h5 class="fw-bold">Genre</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="genre1">
+                                <label class="form-check-label" for="genre1">Fiction</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="genre2">
+                                <label class="form-check-label" for="genre2">Educational</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="genre3">
+                                <label class="form-check-label" for="genre3">Detective</label>
+                            </div>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="genre2">
-                        <label class="form-check-label" for="genre2">Educational</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="genre3">
-                        <label class="form-check-label" for="genre3">Detective</label>
-                    </div>
-                </div>
 
-                <!-- Language -->
-                <div class="mb-3">
-                    <h5 class="fw-bold">Language</h6>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="genre1">
-                        <label class="form-check-label" for="language1">English</label>
+                    <!-- Language -->
+                    <div class="mb-3">
+                        <h5 class="fw-bold">Language</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="genre1">
+                                <label class="form-check-label" for="language1">English</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="genre2">
+                                <label class="form-check-label" for="language2">Slovak</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="genre3">
+                                <label class="form-check-label" for="language3">Russian</label>
+                            </div>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="genre2">
-                        <label class="form-check-label" for="language2">Slovak</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="genre3">
-                        <label class="form-check-label" for="language3">Russian</label>
-                    </div>
-                </div>
 
-                <!-- Author -->
-                <div class="mb-3">
-                    <h5 class="fw-bold">Author</h6>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="genre1">
-                        <label class="form-check-label" for="author1">Philip K. Dick</label>
+                    <!-- Author -->
+                    <div class="mb-3">
+                        <h5 class="fw-bold">Author</h6>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="genre1">
+                                <label class="form-check-label" for="author1">Philip K. Dick</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="genre2">
+                                <label class="form-check-label" for="author2">Pavel Šafárik</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="genre3">
+                                <label class="form-check-label" for="author3">Alexander Pushkin</label>
+                            </div>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="genre2">
-                        <label class="form-check-label" for="author2">Pavel Šafárik</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="genre3">
-                        <label class="form-check-label" for="author3">Alexander Pushkin</label>
-                    </div>
-                </div>
             </aside>
 
             <!-- Main second container -->
             <section class="col-md-9">
-
-                <!-- Ordering -->
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <div class="ms-auto d-flex align-items-center">
-                        <h5 class="fw-bold me-2 mb-0">Order by</h6>
-                        <select class="form-select w-auto" id="sortSelect">
-                            <option value="price-asc">Price: Low to High</option>
-                            <option value="price-desc">Price: High to Low</option>
-                            <option value="bestsellers">Bestsellers</option>
-                            <option value="newest">Newest</option>
-                        </select>                            
-                    </div>
-                </div>
 
                 <!-- All Products -->
                 <div id="products"></div>
