@@ -13,7 +13,7 @@ function createBookCard() {
                         <img src="resources/images/book.jpg" class="img-fluid rounded mx-auto d-block mb-2" style="max-width: 225px;" alt="Book Cover">
                         <p class="text-start text-primary fw-bold mb-1">Book</p>
                         <p class="text-start text-dark mb-1">Author</p>
-                        <p class="text-start text-primary fw-bold mb-0">12,51€</p>
+                        <p class="text-start text-primary fw-bold mb-0">12.51€</p>
                     </div>
                 </div>
             </a>

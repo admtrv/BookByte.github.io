@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const cartItems = [
-    { id: 1, title: "Book", price: 2.67, quantity: 1, stock: "> 10" },
+    { id: 1, title: "Book", price: 2.67, quantity: 2, stock: "> 10" },
     { id: 2, title: "Book", price: 2.75, quantity: 1, stock: "2" },
     { id: 3, title: "Book", price: 4.25, quantity: 1, stock: "7" }
 ];

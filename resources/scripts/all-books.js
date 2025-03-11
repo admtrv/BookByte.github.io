@@ -13,7 +13,7 @@ function createHorizontalProductCard() {
                             <h5 class="fw-bold mb-1">Book</h5>
                             <p class="mb-3">Author</p>
                         </div>
-                        <p class="fw-bold text-primary mb-0 mt-auto">12,51€</p>
+                        <p class="fw-bold text-primary mb-0 mt-auto">12.51€</p>
                     </div>
                 </div>
             </a>
