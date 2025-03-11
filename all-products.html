@@ -1,4 +1,4 @@
-<!-- All Products -->
+<!-- all-products.html -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +20,7 @@
     <div id="header"></div>
 
     <!-- Main Content -->
-    <main class="container flex-fill mt-5 pt-4">
+    <main class="container flex-fill mt-5 pt-4 pb-5">
 
         <hr>
 
@@ -61,80 +61,139 @@
 
                     <!-- Price -->
                     <div class="mb-3">
-                        <h5 class="fw-bold">Price</h6>
+                        <div class="d-flex align-items-center">
+                            <h5 class="fw-bold mb-0">Price</h5>
+                            <button class="btn btn-link border-0 p-0 ms-2 text-dark toggle-filter" data-target="priceFilter">
+                                <i class="bi bi-chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <div id="priceFilter" class="mt-2" style="display: none;">
                             <div id="priceSlider"></div>
                             <div class="d-flex justify-content-between mt-2">
                                 <span id="priceMinLabel">3€</span>
                                 <span id="priceMaxLabel">42€</span>
                             </div>
+                        </div>
                     </div>
 
-                    <!-- Genres -->
+                    <!-- Genre -->
                     <div class="mb-3">
-                        <h5 class="fw-bold">Genre</h6>
+                        <div class="d-flex align-items-center">
+                            <h5 class="fw-bold mb-0">Genre</h5>
+                            <button class="btn btn-link border-0 p-0 ms-2 text-dark toggle-filter" data-target="genreFilters">
+                                <i class="bi bi-chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <div id="genreFilters" class="mt-2" style="display: none;">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="genre1">
-                                <label class="form-check-label" for="genre1">Fiction</label>
+                                <label class="form-check-label" for="genre1">Science Fiction</label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="genre2">
-                                <label class="form-check-label" for="genre2">Educational</label>
+                                <label class="form-check-label" for="genre2">Classic</label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="genre3">
-                                <label class="form-check-label" for="genre3">Detective</label>
+                                <label class="form-check-label" for="genre3">Horror</label>
                             </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="genre4">
+                                <label class="form-check-label" for="genre4">Detective</label>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Language -->
                     <div class="mb-3">
-                        <h5 class="fw-bold">Language</h6>
+                        <div class="d-flex align-items-center">
+                            <h5 class="fw-bold mb-0">Language</h5>
+                            <button class="btn btn-link border-0 p-0 ms-2 text-dark toggle-filter" data-target="languageFilters">
+                                <i class="bi bi-chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <div id="languageFilters" class="mt-2" style="display: none;">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="genre1">
+                                <input class="form-check-input" type="checkbox" id="language1">
                                 <label class="form-check-label" for="language1">English</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="genre2">
+                                <input class="form-check-input" type="checkbox" id="language2">
                                 <label class="form-check-label" for="language2">Slovak</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="genre3">
+                                <input class="form-check-input" type="checkbox" id="language3">
                                 <label class="form-check-label" for="language3">Russian</label>
                             </div>
+                        </div>
                     </div>
 
                     <!-- Author -->
                     <div class="mb-3">
-                        <h5 class="fw-bold">Author</h6>
+                        <div class="d-flex align-items-center">
+                            <h5 class="fw-bold mb-0">Author</h5>
+                            <button class="btn btn-link border-0 p-0 ms-2 text-dark toggle-filter" data-target="authorFilters">
+                                <i class="bi bi-chevron-down"></i>
+                            </button>
+                        </div>
+
+                        <div id="authorFilters" class="mt-2" style="display: none;">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="genre1">
+                                <input class="form-check-input" type="checkbox" id="author1">
                                 <label class="form-check-label" for="author1">Philip K. Dick</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="genre2">
-                                <label class="form-check-label" for="author2">Pavel Šafárik</label>
+                                <input class="form-check-input" type="checkbox" id="author2">
+                                <label class="form-check-label" for="author2">George Orwell</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="genre3">
-                                <label class="form-check-label" for="author3">Alexander Pushkin</label>
+                                <input class="form-check-input" type="checkbox" id="author3">
+                                <label class="form-check-label" for="author3">F. Scott Fitzgerald</label>
                             </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="author4">
+                                <label class="form-check-label" for="author4">Leo Tolstoy</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="author5">
+                                <label class="form-check-label" for="author5">Fyodor Dostoevsky</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="author6">
+                                <label class="form-check-label" for="author6">Jozef Karika</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="author7">
+                                <label class="form-check-label" for="author7">Dominik Dan</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="author8">
+                                <label class="form-check-label" for="author8">Ladislav Mnyachko</label>
+                            </div>
+                        </div>
                     </div>
+
             </aside>
 
             <!-- Main second container -->
-            <section class="col-md-9">
+            <section class="col-md-9 mb-5">
 
                 <!-- All Products -->
-                <div id="products"></div>
+                <div id="products" class="mb-5"></div>
+
+                <!-- Paging -->
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item"><a class="page-link text-primary" href="#">Previous</a></li>
+                      <li class="page-item"><a class="page-link text-primary" href="#">Next</a></li>
+                    </ul>
+                </nav>
 
             </section>
         </div>
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center pt-5">
-              <li class="page-item"><a class="page-link text-primary" href="#">Previous</a></li>
-              <li class="page-item"><a class="page-link text-primary" href="#">Next</a></li>
-            </ul>
-        </nav>
     </main>
 
     <!-- Footer -->

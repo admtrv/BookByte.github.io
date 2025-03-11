@@ -1,74 +1,116 @@
+// cart-items.js
+
 document.addEventListener("DOMContentLoaded", function () {
-    loadCartItems();
+    fetch("resources/database/books.json")
+        .then(response => response.json())
+        .then(data => {
+            loadCartItems(data);
+        })
+        .catch(error => console.error("Error loading book data:", error));
 });
 
-const cartItems = [
-    { id: 1, title: "Book", price: 2.67, quantity: 2, stock: "> 10" },
-    { id: 2, title: "Book", price: 2.75, quantity: 1, stock: "2" },
-    { id: 3, title: "Book", price: 4.25, quantity: 1, stock: "7" }
-];
-
-function loadCartItems() {
+function loadCartItems(books) {
     const cartItemsContainer = document.getElementById("cart-items");
     cartItemsContainer.innerHTML = "";
 
-    cartItems.forEach((item, index) => {
-        const isLimitedStock = item.stock !== "> 10";
-        cartItemsContainer.innerHTML += `
-            <div class="d-flex align-items-center p-3 ${index === 1 ? 'bg-light' : ''}" id="cart-item-${item.id}">
-                <a href="product.html" class="text-decoration-none">
-                    <img src="resources/images/book.jpg" class="rounded me-3" width="80" height="80" alt="Book">
+    const cartItems = [
+        { id: 1, quantity: 2 },
+        { id: 2, quantity: 1 },
+        { id: 3, quantity: 1 }
+    ];
+
+    let cartData = [];
+
+    cartItems.forEach((cartItem) => {
+        const book = books.find(b => b.id === cartItem.id);
+        if (!book) return;
+
+        const isLimitedStock = book.stock <= 10;
+        const itemHTML = `
+            <div class="d-flex align-items-center p-3" id="cart-item-${book.id}">
+                
+                <a href="product.html?id=${book.id}" class="text-decoration-none">
+                    <img src="${book.image1}" class="rounded me-3" width="80" height="80" alt="${book.title}">
                 </a>
+
                 <div class="me-auto">
-                    <a href="product.html" class="text-decoration-none text-dark">
-                        <span class="fw-bold fs-4">${item.title}</span>
+
+                    <a href="product.html?id=${book.id}" class="text-decoration-none text-primary">
+                        <span class="fw-bold">${book.title}</span>
                     </a>
-                    <div class="text-muted fw-bold fs-6">In Stock ${item.stock} pcs</div>
+
+                    <div class="text-muted">In Stock ${book.stock > 10 ? '> 10' : book.stock} pcs</div>
+
                 </div>
                 <div class="d-flex align-items-center">
-                    <button class="btn btn-outline-dark btn-sm me-2" onclick="updateQuantity(${item.id}, -1, ${isLimitedStock ? item.stock : 'null'})">-</button>
-                    <span id="qty-${item.id}" class="mx-2 d-inline-block text-center border border-dark rounded px-2" style="min-width: 40px;">${item.quantity}</span>
-                    <button class="btn btn-outline-dark btn-sm ms-2" onclick="updateQuantity(${item.id}, 1, ${isLimitedStock ? item.stock : 'null'})">+</button>
+                    <button class="btn btn-sm fw-bold" style="min-width: 30px;" onclick="updateQuantity(${book.id}, -1, ${isLimitedStock ? book.stock : 'null'})">-</button>
+
+                    <span id="qty-${book.id}" class="d-inline-block text-center" style="min-width: 40px;">${cartItem.quantity}</span>
+
+                    <button class="btn btn-sm fw-bold" style="min-width: 30px;" onclick="updateQuantity(${book.id}, 1, ${isLimitedStock ? book.stock : 'null'})">+</button>
                 </div>
-                <button class="btn btn-outline-danger btn-sm ms-3" onclick="removeItem(${item.id})">
+
+                <button class="btn btn-outline-danger btn-sm ms-3" onclick="removeItem(${book.id})">
                     <i class="bi bi-x-lg"></i>
                 </button>
-                <span class="ms-3 text-primary fw-bold">${item.price.toFixed(2)}€</span>
+                <span class="ms-3 text-secondary fw-bold">${book.price.toFixed(2)}€</span>
             </div>
         `;
+        cartItemsContainer.innerHTML += itemHTML;
+        cartData.push({ id: book.id, quantity: cartItem.quantity });
     });
 
+    localStorage.setItem("cart", JSON.stringify(cartData));
     updateTotal();
 }
 
 function updateQuantity(itemId, change, maxStock) {
-    const item = cartItems.find(item => item.id === itemId);
-    if (!item) return;
+    const qtyElement = document.getElementById(`qty-${itemId}`);
+    let currentQty = parseInt(qtyElement.textContent);
+    let newQty = currentQty + change;
 
-    const newQty = item.quantity + change;
-    if (newQty >= 1 && (item.stock === "> 10" || newQty <= parseInt(item.stock))) {
-        item.quantity = newQty;
-        document.getElementById(`qty-${item.id}`).textContent = newQty;
+    if (newQty >= 1 && (!maxStock || newQty <= maxStock)) {
+        qtyElement.textContent = newQty;
+        updateCartInStorage(itemId, newQty);
     }
 
     updateTotal();
 }
 
 function removeItem(itemId) {
-    const itemIndex = cartItems.findIndex(item => item.id === itemId);
-    if (itemIndex !== -1) {
-        cartItems.splice(itemIndex, 1);
-        document.getElementById(`cart-item-${itemId}`).remove();
-    }
+    document.getElementById(`cart-item-${itemId}`).remove();
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart = cart.filter(item => item.id !== itemId);
+    localStorage.setItem("cart", JSON.stringify(cart));
 
     updateTotal();
 }
 
+function updateCartInStorage(itemId, quantity) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let itemIndex = cart.findIndex(item => item.id === itemId);
+    if (itemIndex !== -1) {
+        cart[itemIndex].quantity = quantity;
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
 function updateTotal() {
     let total = 0;
-    cartItems.forEach(item => {
-        total += item.price * item.quantity;
+    document.querySelectorAll("#cart-items > div").forEach(cartItem => {
+        let priceElement = cartItem.querySelector(".text-secondary.fw-bold");
+        let quantityElement = cartItem.querySelector("span[id^='qty-']");
+
+        if (priceElement && quantityElement) {
+            let price = parseFloat(priceElement.textContent.replace("€", ""));
+            let quantity = parseInt(quantityElement.textContent);
+
+            if (!isNaN(price) && !isNaN(quantity)) {
+                total += price * quantity;
+            }
+        }
     });
 
     document.getElementById("total-price").textContent = total.toFixed(2) + "€";
 }
+

@@ -1,4 +1,4 @@
-<!-- Confirmation -->
+<!-- confirmation.html -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,12 +18,11 @@
     <div id="header"></div>
 
     <!-- Main Content -->
-    <main class="container flex-fill mt-5 pt-4">
+    <main class="container flex-fill mt-5 pt-4 pb-5 mb-5">
 
         <hr>
 
         <div class="d-flex justify-content-between align-items-center mb-2">
-
             <!-- Breadcrumb -->
             <nav aria-label="breadcrumb" class="mt-0">
                 <ol class="breadcrumb">
@@ -33,12 +32,10 @@
                         </a>
                     </li>
                     <li class="breadcrumb-item">
-                        <a href="delivery.html" class="text-decoration-none text-dark">Delivery
-                        </a>
+                        <a href="delivery.html" class="text-decoration-none text-dark">Delivery</a>
                     </li>
                     <li class="breadcrumb-item">
-                        <a href="payment.html" class="text-decoration-none text-dark">Payment
-                        </a>
+                        <a href="payment.html" class="text-decoration-none text-dark">Payment</a>
                     </li>
                     <li class="breadcrumb-item active text-muted" aria-current="page">
                         Confirmation
@@ -50,36 +47,9 @@
         <!-- Order -->
         <div class="row mt-4">
             <!-- Cart Items -->
-            <div class="col-md-7 border rounded p-3">
-
-                <div class="d-flex align-items-center mb-3">
-                    <img src="resources/images/book.jpg" class="rounded me-3" width="60" height="60" alt="Book">
-                    <div class="me-auto">
-                        <span class="fw-bold fs-5">Book</span>
-                        <span class="border px-2 py-1 ms-2">2</span>
-                    </div>
-                    <span class="text-muted fs-5">2.67€</span>
-                </div>
-
-                <div class="d-flex align-items-center mb-3">
-                    <img src="resources/images/book.jpg" class="rounded me-3" width="60" height="60" alt="Book">
-                    <div class="me-auto">
-                        <span class="fw-bold fs-5">Book</span>
-                        <span class="border px-2 py-1 ms-2">1</span>
-                    </div>
-                    <span class="text-muted fs-5">2.75€</span>
-                </div>
-
-                <div class="d-flex align-items-center">
-                    <img src="resources/images/book.jpg" class="rounded me-3" width="60" height="60" alt="Book">
-                    <div class="me-auto">
-                        <span class="fw-bold fs-5">Book</span>
-                        <span class="border px-2 py-1 ms-2">1</span>
-                    </div>
-                    <span class="text-muted fs-5">4.25€</span>
-                </div>
+            <div class="border rounded col-md-7 p-3" id="cart-items">
+                <p class="text-muted text-center">Items</p>
             </div>
-
 
             <!-- Right Section -->
             <div class="col-md-5">
@@ -87,8 +57,8 @@
                 <div class="border rounded p-3">
                     <h4 class="fw-bold">Delivery</h4>
                     <div class="d-flex justify-content-between">
-                        <p class="text-primary fw-bold fs-5">AlzaBox Sladkovicova 2244/63</p>
-                        <p class="text-muted fs-5">1.80€</p>
+                        <p id="delivery-method" class="text-muted fw-bold">Delivery Method</p>
+                        <p id="delivery-price" class="text-secondary fw-bold">0.00€</p>
                     </div>
                 </div>
 
@@ -96,20 +66,19 @@
                 <div class="border rounded p-3 mt-3">
                     <h4 class="fw-bold">Payment</h4>
                     <div class="d-flex justify-content-between">
-                        <p class="text-primary fw-bold fs-5">Online Payment</p>
-                        <p class="text-muted fs-5">No Charge</p>
+                        <p id="payment-method" class="text-muted fw-bold">Payment Method</p>
+                        <p id="payment-price" class="text-muted fw-bold">0.00€</p>
                     </div>
                 </div>
             </div>
-
         </div>
 
         <hr class="mt-4">
 
         <!-- Total -->
-        <div class="d-flex justify-content-between fw-bold fs-4">
-            <span>Total</span>
-            <span>14.14€</span>
+        <div class="d-flex justify-content-between">
+            <span class="text-dark fw-bold fs-4">Total</span>
+            <span class="text-secondary fw-bold fs-4" id="total-price">0.00€</span>
         </div>
 
         <!-- Confirm -->
@@ -124,6 +93,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="resources/scripts/load.js"></script>
+    <script src="resources/scripts/confirm-items.js"></script>
+
 </body>
 
 </html>

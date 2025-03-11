@@ -1,4 +1,4 @@
-<!-- Payment -->
+<!-- payment.html -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +18,7 @@
     <div id="header"></div>
 
     <!-- Main Content -->
-    <main class="container flex-fill mt-5 pt-4">
+    <main class="container flex-fill mt-5 pt-4 pb-5 mb-5">
 
         <hr>
 
@@ -50,32 +50,33 @@
                 <!-- Card Payment (Disabled) -->
                 <label class="list-group-item d-flex justify-content-between align-items-center fs-5 py-3">
                     <div class="d-flex align-items-center">
-                        <input type="radio" name="paymentMethod" class="form-check-input me-3" value="card" disabled>
+                        <input type="radio" name="paymentMethod" class="form-check-input me-3" value="card">
                         Card
                     </div>
-                    <span class="fw-bold">No Charge</span>
+                    <span class="text-muted fw-bold fs-6">No Charge</span>
                 </label>
 
                 <!-- Cash on Delivery (Disabled) -->
                 <label class="list-group-item d-flex justify-content-between align-items-center fs-5 py-3">
                     <div class="d-flex align-items-center">
-                        <input type="radio" name="paymentMethod" class="form-check-input me-3" value="cash" disabled>
+                        <input type="radio" name="paymentMethod" class="form-check-input me-3" value="cash">
                         Cash (On Delivery)
                     </div>
-                    <span class="fw-bold">1.50€</span>
+                    <span class="text-secondary fw-bold fs-6">1.50€</span>
                 </label>
 
                 <!-- Online Payment -->
                 <label class="list-group-item d-flex justify-content-between align-items-center fs-5 py-3">
                     <div class="d-flex align-items-center">
-                        <input type="radio" name="paymentMethod" class="form-check-input me-3" value="card" checked>
+                        <input type="radio" name="paymentMethod" class="form-check-input me-3" value="card">
                         Online Payment
                     </div>
                     <div class="d-flex justify-content-end flex-grow-1">
-                        <span class="fw-bold me-3"><i class="bi bi-google"></i> Pay</span>
-                        <span class="fw-bold"><i class="bi bi-apple"></i> Pay</span>
-                        <span class="fw-bold ms-4">No Charge</span>
+                        <span class="text-muted fw-bold fs-6 me-2"><i class="bi bi-google"></i> Pay</span>
+                        <span class="text-muted fw-bold fs-6"><i class="bi bi-apple"></i> Pay</span>
+                        <span class="text-muted fw-bold fs-6 ms-4">No Charge</span>
                     </div>
+                    
                 </label>
             </div>
         </div>

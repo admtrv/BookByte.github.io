@@ -1,3 +1,5 @@
+// sort.js
+
 var priceSlider = document.getElementById('priceSlider');
 var priceMinLabel = document.getElementById('priceMinLabel');
 var priceMaxLabel = document.getElementById('priceMaxLabel');
@@ -37,4 +39,21 @@ document.addEventListener("DOMContentLoaded", function () {
     if (sortParam && sortSelect) {
         sortSelect.value = sortParam;
     }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".toggle-filter").forEach(button => {
+        button.addEventListener("click", function () {
+            const targetId = this.getAttribute("data-target");
+            const targetDiv = document.getElementById(targetId);
+
+            if (targetDiv.style.display === "none") {
+                targetDiv.style.display = "block";
+                this.innerHTML = '<i class="bi bi-chevron-up"></i>';
+            } else {
+                targetDiv.style.display = "none";
+                this.innerHTML = '<i class="bi bi-chevron-down"></i>';
+            }
+        });
+    });
 });

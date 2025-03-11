@@ -1,4 +1,4 @@
-<!-- Delivery -->
+<!-- delivery.html -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +18,7 @@
     <div id="header"></div>
 
     <!-- Main Content -->
-    <main class="container flex-fill mt-5 pt-4">
+    <main class="container flex-fill mt-5 pt-4 pb-5 mb-5">
 
         <hr>
 
@@ -43,55 +43,84 @@
         <!-- Delivery Methods -->
         <div class="mt-4">
             <div class="list-group">
-                <label class="list-group-item d-flex justify-content-between align-items-center fs-5 py-3" data-bs-toggle="collapse" data-bs-target="#address_info">
+
+                <!-- Home Delivery -->
+                <label class="list-group-item d-flex justify-content-between align-items-center fs-5 py-3"
+                    data-bs-toggle="collapse" data-bs-target="#address_info">
                     <div class="d-flex align-items-center">
-                        <input type="radio" name="deliveryMethod" class="form-check-input me-3" value="home" id="homeDelivery">
+                        <input type="radio" name="deliveryMethod" class="form-check-input me-3" value="home"
+                            id="homeDelivery">
                         Home Delivery (FedEx)
                     </div>
-                    <span class="fw-bold">3.50€</span>
+                    <span class="text-secondary fw-bold fs-6">3.50€</span>
                 </label>
-                
-                
-                <div id="address_info" class="collapse">
+
+                <div id="address_info" class="collapse mt-3 mb-3">
                     <label for="address" class="form-label">Delivery Address</label>
                     <input type="text" class="form-control mb-2" id="address" placeholder="Enter your address" required>
-                
+
                     <label for="city" class="form-label">City</label>
                     <input type="text" class="form-control mb-2" id="city" placeholder="Enter your city" required>
-                
+
                     <label for="postal_code" class="form-label">Postal Code</label>
-                    <input type="text" class="form-control" id="postal_code" placeholder="Enter your postal code" required>
+                    <input type="text" class="form-control" id="postal_code" placeholder="Enter your postal code"
+                        required>
                 </div>
 
                 <!-- Drop Box -->
-                <label class="list-group-item d-flex justify-content-between align-items-center fs-5 py-3">
+                <label class="list-group-item d-flex justify-content-between align-items-center fs-5 py-3"
+                    data-bs-toggle="collapse" data-bs-target="#drop_box_locations">
                     <div class="d-flex align-items-center">
                         <input type="radio" name="deliveryMethod" class="form-check-input me-3" value="zbox">
                         Drop Box (Alza)
                     </div>
-                    <div class="d-flex align-items-center">
-                        <a href="#" class="text-primary text-decoration-none fw-bold me-4 fs-6 d-flex align-items-center">
-                            Select Box <i class="bi bi-geo-alt-fill ms-2"></i>
-                        </a>
-                        <span class="fw-bold">1.80€</span>
-                    </div>
+                    <span class="text-secondary fw-bold fs-6">1.80€</span>
+
                 </label>
 
+                <div id="drop_box_locations" class="collapse mt-3 mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="dropBox" id="drop1">
+                        <label class="form-check-label" for="drop1">Bratislava - Šancová 112</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="dropBox" id="drop2">
+                        <label class="form-check-label" for="drop2">Košice - Trieda SNP 78</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="dropBox" id="drop3">
+                        <label class="form-check-label" for="drop3">Žilina - Hlavná 55</label>
+                    </div>
+                </div>
+
                 <!-- Store Pickup -->
-                <label class="list-group-item d-flex justify-content-between align-items-center fs-5 py-3">
+                <label class="list-group-item d-flex justify-content-between align-items-center fs-5 py-3"
+                    data-bs-toggle="collapse" data-bs-target="#store_pickup_locations">
                     <div class="d-flex align-items-center">
                         <input type="radio" name="deliveryMethod" class="form-check-input me-3" value="store">
                         In-Store Pickup
                     </div>
-                    <div class="d-flex align-items-center">
-                        <a href="#" class="text-primary text-decoration-none fw-bold me-4 fs-6 d-flex align-items-center">
-                            Select Store <i class="bi bi-geo-alt-fill ms-2"></i>
-                        </a>
-                        <span class="fw-bold">No Charge</span>
-                    </div>
+                    <span class="text-muted fw-bold fs-6">No Charge</span>
                 </label>
+
+                <div id="store_pickup_locations" class="collapse mt-3 mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="storePickup" id="store1">
+                        <label class="form-check-label" for="store1">Bratislava - Eurovea Mall</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="storePickup" id="store2">
+                        <label class="form-check-label" for="store2">Košice - Aupark Shopping Center</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="storePickup" id="store3">
+                        <label class="form-check-label" for="store3">Nitra - OC Mlyny</label>
+                    </div>
+                </div>
+
             </div>
         </div>
+
 
         <!-- Continue -->
         <div class="d-flex justify-content-end mt-3">

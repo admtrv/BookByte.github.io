@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "title": "Do Androids Dream of Electric Sheep?",
+        "author": "Philip K. Dick",
+        "price": 9.99,
+        "genre": "Science Fiction",
+        "language": "English",
+        "stock": 5,
+        "image1": "resources/images/books/sheeps1.jpg",
+        "image2": "resources/images/books/sheeps2.jpg",
+        "description": "A post-apocalyptic novel set in a future where Earth has been ravaged by nuclear war. The story follows bounty hunter Rick Deckard, who is tasked with 'retiring' rogue androids who have escaped from Mars. As he hunts them down, he grapples with the question of what it means to be human. This novel inspired the movie 'Blade Runner' and is a thought-provoking exploration of artificial intelligence, empathy, and identity."
+    },
+    {
+        "id": 2,
+        "title": "1984",
+        "author": "George Orwell",
+        "price": 8.75,
+        "genre": "Science Fiction",
+        "language": "English",
+        "stock": 12,
+        "image1": "resources/images/books/19841.jpg",
+        "image2": "resources/images/books/19842.jpg",
+        "description": "Orwell's dystopian masterpiece paints a terrifying vision of a totalitarian society where surveillance, propaganda, and thought control rule. Winston Smith, a low-ranking member of the oppressive Party, begins to question the system and embarks on a dangerous journey towards truth and freedom. A chilling warning about government overreach and the erosion of personal liberties."
+    },
+    {
+        "id": 3,
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "price": 7.99,
+        "genre": "Classic",
+        "language": "English",
+        "stock": 2,
+        "image1": "resources/images/books/gatsby1.jpg",
+        "image2": "resources/images/books/gatsby2.jpg",
+        "description": "Set in the Roaring Twenties, this novel tells the tragic story of Jay Gatsby, a wealthy and mysterious man obsessed with rekindling his past love with Daisy Buchanan. Through the eyes of narrator Nick Carraway, Fitzgerald critiques the American Dream, materialism, and the illusion of happiness. A timeless novel full of lavish parties, unfulfilled longing, and social decay."
+    },
+    {
+        "id": 4,
+        "title": "War and Peace",
+        "author": "Leo Tolstoy",
+        "price": 12.50,
+        "genre": "Classic",
+        "language": "Russian",
+        "stock": 3,
+        "image1": "resources/images/books/war1.jpg",
+        "image2": "resources/images/books/war2.jpg",
+        "description": "One of the greatest works of world literature, 'War and Peace' follows the lives of aristocratic families during the Napoleonic Wars. Blending history and fiction, Tolstoy paints an intricate portrait of love, war, fate, and free will. The novel explores the struggles of its characters, including Prince Andrei and Natasha Rostova, against the backdrop of one of history's most turbulent periods."
+    },
+    {
+        "id": 5,
+        "title": "Crime and Punishment",
+        "author": "Fyodor Dostoevsky",
+        "price": 11.50,
+        "genre": "Classic",
+        "language": "Russian",
+        "stock": 10,
+        "image1": "resources/images/books/crime1.jpg",
+        "image2": "resources/images/books/crime2.jpg",
+        "description": "Dostoevsky’s psychological masterpiece delves into the mind of Raskolnikov, a poor ex-student in St. Petersburg who justifies murdering a greedy pawnbroker in an attempt to prove his superiority. However, his guilt and paranoia slowly consume him, leading to a thrilling exploration of morality, justice, and redemption."
+    },
+    {
+        "id": 6,
+        "title": "Anna Karenina",
+        "author": "Leo Tolstoy",
+        "price": 10.20,
+        "genre": "Classic",
+        "language": "Russian",
+        "stock": 6,
+        "image1": "resources/images/books/anna1.jpg",
+        "image2": "resources/images/books/anna2.jpg",
+        "description": "Tolstoy’s novel about love, passion, and societal expectations follows Anna Karenina, a woman who risks everything for an affair with the dashing Count Vronsky. Her tragic fate contrasts with the story of Levin, a man searching for meaning in work, faith, and family life. A brilliant analysis of human emotions, hypocrisy, and the constraints of high society."
+    },
+    {
+        "id": 7,
+        "title": "The Crack",
+        "author": "Jozef Karika",
+        "price": 9.20,
+        "genre": "Horror",
+        "language": "Slovak",
+        "stock": 9,
+        "image1": "resources/images/books/crack1.jpg",
+        "image2": "resources/images/books/crack2.jpg",
+        "description": "A gripping horror-thriller about a man who discovers an abandoned house with a mysterious crack in the wall. As he investigates, strange and terrifying events begin to unfold, pulling him into a nightmare beyond imagination. A chilling Slovak horror story that keeps readers on the edge of their seats."
+    },
+    {
+        "id": 8,
+        "title": "Circles on the Water",
+        "author": "Dominik Dan",
+        "price": 8.40,
+        "genre": "Detective",
+        "language": "Slovak",
+        "stock": 15,
+        "image1": "resources/images/books/circle1.jpg",
+        "image2": "resources/images/books/circle2.jpg",
+        "description": "Detective Krauz is back in another thrilling murder mystery set in Slovakia. A seemingly random drowning case turns out to be something far more sinister. With twists, corruption, and dangerous criminals, this detective novel will keep you hooked until the last page."
+    },
+    {
+        "id": 9,
+        "title": "How the Power Tastes",
+        "author": "Ladislav Mnyachko",
+        "price": 9.50,
+        "genre": "Classic",
+        "language": "Slovak",
+        "stock": 4,
+        "image1": "resources/images/books/power1.jpg",
+        "image2": "resources/images/books/power2.jpg",
+        "description": "A powerful novel about the corrupting nature of political power. Mňačko exposes the hypocrisy of the ruling elite and the consequences of absolute authority. A must-read for those interested in political literature and historical fiction."
+    }
+]

@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Product</title>
+    <title id="pageTitle">Product</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="resources/styles/custom.css">
@@ -18,7 +18,7 @@
     <div id="header"></div>
 
     <!-- Main Content -->
-    <main class="container flex-fill mt-5 pt-4">
+    <main class="container flex-fill mt-5 pt-4 pb-5 mb-5">
 
         <hr>
 
@@ -34,11 +34,10 @@
                     </li>
 
                     <li class="breadcrumb-item">
-                        <a href="all-products.html" class="text-decoration-none text-dark"> All Books
-                        </a>
+                        <a href="all-products.html" class="text-decoration-none text-dark"> All Books </a>
                     </li>
-
-                    <li class="breadcrumb-item active text-muted" aria-current="page">
+                    
+                    <li class="breadcrumb-item active text-muted" id="bookTitleBreadcrumb" aria-current="page">
                         Book
                     </li>
                 </ol>
@@ -46,7 +45,7 @@
 
         </div>
 
-        <div class="container  pt-3">
+        <div class="container pt-3">
             <div class="row align-items-center">
 
                 <!-- Image Carousel -->
@@ -54,84 +53,67 @@
                     <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="resources/images/book.jpg" class="img-fluid w-100 rounded shadow-sm"
-                                    alt="Book Cover">
+                                <img id="bookImage1" class="img-fluid w-100 rounded shadow-sm" alt="Book Cover">
                             </div>
                             <div class="carousel-item">
-                                <img src="resources/images/book.jpg" class="img-fluid w-100 rounded shadow-sm"
-                                    alt="Book Cover Back">
+                                <img id="bookImage2" class="img-fluid w-100 rounded shadow-sm" alt="Book Cover Back">
                             </div>
                         </div>
-
                         <!-- Navigation -->
                         <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
                             data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"
-                                style="filter: invert(1);"></span>
+                            <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#productCarousel"
                             data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"
-                                style="filter: invert(1);"></span>
+                            <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
-
                     </div>
                 </div>
 
                 <div class="col-md-8">
-
                     <!-- Book -->
-                    <h1 class="fw-bold text-dark">Book</h1>
+                    <h2 class="text-dark fw-bold" id="bookTitle">Book</h1>
 
                     <!-- Author -->
-                    <h3 class="text-muted">Author</h3>
+                    <h5 class="text-primary" id="bookAuthor">Author</h3>
 
                     <!-- Tags -->
-                    <div class="d-flex flex-wrap">
-                        <h5 class="text-dark me-3">Genre</h5>
-                        <h5 class="text-dark">Language</h5>
+                    <div class="d-flex flex-wrap mt-2">
+                        <span class="badge bg-info me-2 fs-6 p-2" id="bookGenre">Genre</span>
+                        <span class="badge bg-info fs-6 p-2" id="bookLanguage">Language</span>
                     </div>
-
+                    
                     <hr>
 
                     <!-- Description -->
-                    <p class="text-muted">
-                        This is a sample text section where you can describe something related to the image.
-                        You can make this text longer or shorter depending on the content.
-                        Cupcake ipsum dolor sit amet marzipan sweet cheesecake. Gingerbread gummi bears jujubes macaroon
-                        muffin dragée powder chocolate cake. Candy brownie caramels liquorice icing. Chocolate bar
-                        marzipan jujubes lemon drops muffin icing. Cake pudding oat cake sesame snaps croissant icing
-                        pastry. Cotton candy chocolate cake sweet lemon drops I love jelly-o.
-                    </p>
+                    <p class="text-muted" id="bookDescription">Description</p>
 
                     <ul class="list-inline mt-5 pt-4 d-flex align-items-center">
 
                         <!-- Price -->
                         <li class="list-inline-item me-5">
-                            <h3 class="text-primary fw-bold">12.51€</h3>
+                            <h3 class="text-secondary fw-bold" id="bookPrice">0.00€</h3>
                         </li>
 
                         <!-- In Stock -->
                         <li class="text-dark list-inline-item me-5">
-                            <h6>In Stock > 10 pcs</h6>
+                            <h6 id="bookStock">In Stock 0 pcs</h6>
                         </li>
 
                         <!-- Add to Cart -->
                         <li class="list-inline-item ms-5 ps-5">
-                            <a href="#" class="btn btn-dark">
+                            <a href="#" class="btn btn-primary">
                                 Add to Cart <i class="fas fa-shopping-cart ms-2"></i>
                             </a>
                         </li>
-
                     </ul>
                 </div>
             </div>
         </div>
 
-    
-        
     </main>
 
     <!-- Footer -->
@@ -139,6 +121,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="resources/scripts/load.js"></script>
+    <script src="resources/scripts/product.js"></script>
 </body>
 
 </html>
