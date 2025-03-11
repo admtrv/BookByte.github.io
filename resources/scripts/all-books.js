@@ -1,3 +1,5 @@
+// all-books.js
+
 document.addEventListener("DOMContentLoaded", function () {
     fetch("resources/database/books.json")
         .then(response => response.json())

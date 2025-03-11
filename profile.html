@@ -1,3 +1,5 @@
+<!-- profile.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,21 +22,22 @@
     <!-- Main Content -->
     <main class="container flex-fill mt-5 pt-4 pb-5 mb-5">
 
-        <hr>
-
-        <div class="d-flex justify-content-between align-items-center mb-2">
-            <h3 class="fw-bold">Profile</h3>
-        
-            <!-- Sign In -->
-            <a href="login.html" class="text-decoration-none text-primary fs-5 d-flex align-items-center">
-                Sign In <i class="bi bi-box-arrow-in-right ms-2 fs-3"></i>
-            </a>
-        </div>
-        
         <!-- Profile Information -->
-        <div class="border rounded p-3 mt-4 container d-flex justify-content-center">
+        <div class="container d-flex justify-content-center p-0">
+
             <div class="w-100">
-                <h3>Personal Information</h3>
+
+                <hr>
+
+                <div class="d-flex justify-content-between align-items-center mb-0">
+                    <h3 class="fw-bold">Profile</h3>
+
+                    <!-- Sign In -->
+                    <a href="login.html" class="text-decoration-none text-primary fs-5 d-flex align-items-center">
+                        Sign In <i class="bi bi-box-arrow-in-right ms-2 fs-3"></i>
+                    </a>
+                </div>
+
                 <form>
                     <div class="row mt-4">
                         <div class="col-md-4">
@@ -49,7 +52,8 @@
                         </div>
                         <div class="col-md-4">
                             <label for="birth_date" class="form-label">Date of Birth</label>
-                            <input type="date" class="form-control border border-2 border-dark" id="birth_date" required>
+                            <input type="date" class="form-control border border-2 border-dark" id="birth_date"
+                                required>
                         </div>
                     </div>
                     <div class="row mt-4">
@@ -74,9 +78,13 @@
         </div>
 
         <!-- Password Section -->
-        <div class="border rounded p-3 mt-3 container d-flex justify-content-center">
+        <div class=" container d-flex justify-content-center p-0 mt-5">
             <div class="w-100">
-                <h3>Password</h3>
+
+                <hr>
+
+                <h3 class="fw-bold">Password</h3>
+                
                 <form>
                     <div class="row mt-4">
                         <div class="col-md-4">
@@ -86,8 +94,8 @@
                         </div>
                         <div class="col-md-4">
                             <label for="confirm_password" class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control border border-2 border-dark" id="confirm_password"
-                                placeholder="Confirm your password" required>
+                            <input type="password" class="form-control border border-2 border-dark"
+                                id="confirm_password" placeholder="Confirm your password" required>
                         </div>
                         <div class="col-md-4 d-flex align-items-end">
                             <button type="submit" class="btn btn-primary w-100">
