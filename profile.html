@@ -32,6 +32,68 @@
                 Sign In <i class="bi bi-box-arrow-in-right ms-2 fs-3"></i>
             </a>
         </div>
+        
+        <div class="container d-flex justify-content-center pt-5">
+            <div class="w-100"> <!-- Adjust width as needed -->
+                <form>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="name" class="form-label">First Name</label>
+                            <input type="text" class="form-control border border-2 border-dark" id="name"
+                                placeholder="Enter your name" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control border border-2 border-dark" id="email"
+                                placeholder="Enter your email" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="phone_number" class="form-label">Phone number</label>
+                            <input type="tel" class="form-control border border-2 border-dark" id="phone_number"
+                                placeholder="Enter your phone number" required>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-4">
+                            <label for="second_name" class="form-label">Second name</label>
+                            <input type="text" class="form-control border border-2 border-dark" id="second_name"
+                                placeholder="Enter your name" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="birth_date" class="form-label">Date of Birth</label>
+                            <input type="date" class="form-control border border-2 border-dark" id="birth_date" required>
+                        </div>
+                    </div>
+                </form>
+
+                <hr class="border border-black">
+                <h3>Password</h3>
+                
+                <form>
+                    <div class="row mt-4 pt-4">
+                        <div class="col-md-4">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="text" class="form-control border border-2 border-dark" id="password"
+                                placeholder="Enter your name" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="confirm_password" class="form-label">Confirm password</label>
+                            <input type="text" class="form-control border border-2 border-dark" id="password"
+                                placeholder="Enter your name" required>
+                        </div>
+                        
+                        <div class="col-md-4 d-flex align-items-end">
+                            <button type="submit" class="btn btn-dark w-100">
+                                Save Changes
+                            </button>
+                        </div>
+                    </div>
+                </form>
+               
+            </div>
+        </div>
+
+        </div>
 
     </main>
 
