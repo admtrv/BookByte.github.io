@@ -27,22 +27,23 @@ function loadCartItems(books) {
 
         const isLimitedStock = book.stock <= 10;
         const itemHTML = `
-            <div class="d-flex align-items-center p-3" id="cart-item-${book.id}">
-                
-                <a href="product.html?id=${book.id}" class="text-decoration-none">
+            <div class="d-flex align-items-center p-3 w-100 overflow-hidden" id="cart-item-${book.id}">
+
+                <a href="product.html?id=${book.id}" class="text-decoration-none flex-shrink-0">
                     <img src="${book.image1}" class="rounded me-3" width="80" height="80" alt="${book.title}">
                 </a>
 
-                <div class="me-auto">
-
+                <div class="me-auto overflow-hidden">
                     <a href="product.html?id=${book.id}" class="text-decoration-none text-primary">
-                        <span class="fw-bold">${book.title}</span>
+                        <span class="fw-bold d-inline-block text-truncate" style="max-width: 300px; width: 100%;">
+                            ${book.title}
+                        </span>
                     </a>
 
                     <div class="text-muted">In Stock ${book.stock > 10 ? '> 10' : book.stock} pcs</div>
 
                 </div>
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center flex-shrink-0">
                     <button class="btn btn-sm fw-bold" style="min-width: 30px;" onclick="updateQuantity(${book.id}, -1, ${isLimitedStock ? book.stock : 'null'})">-</button>
 
                     <span id="qty-${book.id}" class="d-inline-block text-center" style="min-width: 40px;">${cartItem.quantity}</span>
@@ -50,12 +51,14 @@ function loadCartItems(books) {
                     <button class="btn btn-sm fw-bold" style="min-width: 30px;" onclick="updateQuantity(${book.id}, 1, ${isLimitedStock ? book.stock : 'null'})">+</button>
                 </div>
 
-                <button class="btn btn-outline-danger btn-sm ms-3" onclick="removeItem(${book.id})">
+                <button class="btn btn-outline-danger btn-sm ms-3 flex-shrink-0" onclick="removeItem(${book.id})">
                     <i class="bi bi-x-lg"></i>
                 </button>
-                <span class="ms-3 text-secondary fw-bold">${book.price.toFixed(2)}€</span>
+                <span class="ms-3 text-secondary fw-bold flex-shrink-0">${book.price.toFixed(2)}€</span>
             </div>
         `;
+
+
         cartItemsContainer.innerHTML += itemHTML;
         cartData.push({ id: book.id, quantity: cartItem.quantity });
     });

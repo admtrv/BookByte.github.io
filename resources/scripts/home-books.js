@@ -19,8 +19,8 @@ function createBookCard(book) {
                     <div class="card-body p-3 text-center"> 
                         <img src="${book.image1}" class="img-fluid rounded mx-auto d-block mb-2" style="max-width: 225px;" alt="${book.title}">
                         <h6 class="text-start text-primary fw-bold mb-1 text-truncate" style="max-width: 220px;">${book.title}</h6>
-                        <p class="text-start text-dark mb-1">${book.author}</p>
-                        <p class="text-start text-secondary fw-bold mb-0">${book.price.toFixed(2)}€</p>
+                        <p class="text-start text-dark text-truncate mb-1">${book.author}</p>
+                        <p class="text-start text-secondary text-truncate fw-bold mb-0">${book.price.toFixed(2)}€</p>
                     </div>
                 </div>
             </a>

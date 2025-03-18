@@ -25,10 +25,9 @@
 
         <hr>
 
-        <div class="d-flex justify-content-between align-items-center mb-2">
-
+        <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
             <!-- Breadcrumb -->
-            <nav aria-label="breadcrumb" class="mt-0">
+            <nav aria-label="breadcrumb" class="mt-0 col-12 col-md-auto">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">
                         <a href="index.html" class="text-decoration-none text-dark">
@@ -42,7 +41,7 @@
             </nav>
 
             <!-- Ordering -->
-            <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center col-12 col-md-auto mt-2 mt-md-0">
                 <h5 class="fw-bold me-2 mb-0">Order by</h5>
                 <select class="form-select w-auto" id="sortSelect">
                     <option value="price-asc">Price: Low to High</option>
@@ -64,7 +63,8 @@
                     <div class="mb-3">
                         <div class="d-flex align-items-center">
                             <h5 class="fw-bold mb-0">Price</h5>
-                            <button class="btn btn-link border-0 p-0 ms-2 text-dark toggle-filter" data-target="priceFilter">
+                            <button class="btn btn-link border-0 p-0 ms-2 text-dark toggle-filter"
+                                data-target="priceFilter">
                                 <i class="bi bi-chevron-down"></i>
                             </button>
                         </div>
@@ -82,7 +82,8 @@
                     <div class="mb-3">
                         <div class="d-flex align-items-center">
                             <h5 class="fw-bold mb-0">Genre</h5>
-                            <button class="btn btn-link border-0 p-0 ms-2 text-dark toggle-filter" data-target="genreFilters">
+                            <button class="btn btn-link border-0 p-0 ms-2 text-dark toggle-filter"
+                                data-target="genreFilters">
                                 <i class="bi bi-chevron-down"></i>
                             </button>
                         </div>
@@ -111,7 +112,8 @@
                     <div class="mb-3">
                         <div class="d-flex align-items-center">
                             <h5 class="fw-bold mb-0">Language</h5>
-                            <button class="btn btn-link border-0 p-0 ms-2 text-dark toggle-filter" data-target="languageFilters">
+                            <button class="btn btn-link border-0 p-0 ms-2 text-dark toggle-filter"
+                                data-target="languageFilters">
                                 <i class="bi bi-chevron-down"></i>
                             </button>
                         </div>
@@ -136,7 +138,8 @@
                     <div class="mb-3">
                         <div class="d-flex align-items-center">
                             <h5 class="fw-bold mb-0">Author</h5>
-                            <button class="btn btn-link border-0 p-0 ms-2 text-dark toggle-filter" data-target="authorFilters">
+                            <button class="btn btn-link border-0 p-0 ms-2 text-dark toggle-filter"
+                                data-target="authorFilters">
                                 <i class="bi bi-chevron-down"></i>
                             </button>
                         </div>
@@ -188,8 +191,8 @@
                 <!-- Paging -->
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">
-                      <li class="page-item"><a class="page-link text-primary" href="#">Previous</a></li>
-                      <li class="page-item"><a class="page-link text-primary" href="#">Next</a></li>
+                        <li class="page-item"><a class="page-link text-primary" href="#">Previous</a></li>
+                        <li class="page-item"><a class="page-link text-primary" href="#">Next</a></li>
                     </ul>
                 </nav>
 

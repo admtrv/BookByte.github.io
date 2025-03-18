@@ -16,9 +16,9 @@ function createHorizontalProductCard(book) {
                     <div class="card-body d-flex flex-column justify-content-between p-3">
                         <div>
                             <h5 class="text-start text-primary fw-bold text-truncate mb-1" style="max-width: 200px;">${book.title}</h5>
-                            <p class="test-start text-dark mb-3">${book.author}</p>
+                            <p class="test-start text-dark text-truncate mb-3">${book.author}</p>
                         </div>
-                        <p class="test-start text-secondary fw-bold mb-0">${book.price.toFixed(2)}€</p>
+                        <p class="test-start text-secondary text-truncate fw-bold mb-0">${book.price.toFixed(2)}€</p>
                     </div>
                 </div>
             </a>
@@ -35,6 +35,6 @@ function loadProductGrid(sectionId, books) {
         gridHTML += createHorizontalProductCard(book);
     });
     gridHTML += "</div>";
-    
+
     section.innerHTML = gridHTML;
 }

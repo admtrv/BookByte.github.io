@@ -48,29 +48,36 @@
         <!-- Order -->
         <div class="row mt-4">
             <!-- Cart Items -->
-            <div class="border rounded col-md-7 p-3" id="cart-items">
+            <div class="rounded col-md-7 p-3" id="cart-items">
                 <p class="text-muted text-center">Items</p>
             </div>
 
             <!-- Right Section -->
             <div class="col-md-5">
                 <!-- Delivery -->
-                <div class="border rounded p-3">
+                <div class="rounded p-3">
                     <h4 class="fw-bold">Delivery</h4>
                     <div class="d-flex justify-content-between">
-                        <p id="delivery-method" class="text-muted fw-bold">Delivery Method</p>
+                        <p id="delivery-method" class="text-muted fw-bold text-truncate overflow-hidden d-inline-block"
+                            style="max-width: 60%; white-space: nowrap;">
+                            Delivery Method
+                        </p>
                         <p id="delivery-price" class="text-secondary fw-bold">0.00€</p>
                     </div>
                 </div>
 
                 <!-- Payment -->
-                <div class="border rounded p-3 mt-3">
+                <div class="rounded p-3 mt-3">
                     <h4 class="fw-bold">Payment</h4>
                     <div class="d-flex justify-content-between">
-                        <p id="payment-method" class="text-muted fw-bold">Payment Method</p>
+                        <p id="payment-method" class="text-muted fw-bold text-truncate overflow-hidden d-inline-block"
+                            style="max-width: 60%; white-space: nowrap;">
+                            Payment Method
+                        </p>
                         <p id="payment-price" class="text-muted fw-bold">0.00€</p>
                     </div>
                 </div>
+
             </div>
         </div>
 
