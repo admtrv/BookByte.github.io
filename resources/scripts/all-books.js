@@ -16,10 +16,22 @@ function createHorizontalProductCard(book) {
                     <div class="card-body d-flex flex-column justify-content-between p-3">
                         <div>
                             <h5 class="text-start text-primary fw-bold text-truncate mb-1" style="max-width: 200px;">${book.title}</h5>
-                            <p class="test-start text-dark text-truncate mb-3">${book.author}</p>
+                            <p class="text-start text-dark text-truncate mb-3">${book.author}</p>
                         </div>
-                        <p class="test-start text-secondary text-truncate fw-bold mb-0">${book.price.toFixed(2)}€</p>
+                        <p class="text-start text-secondary text-truncate fw-bold mb-0">${book.price.toFixed(2)}€</p>
                     </div>
+                </div>
+            </a>
+        </div>
+    `;
+}
+
+function createAddNewBookCard() {
+    return `
+        <div class="col">
+            <a href="admin-page.html" class="text-decoration-none text-secondary">
+                <div class="card border border-2 border-secondary d-flex align-items-center justify-content-center p-3" style="height: 100%; min-height: 220px;">
+                    <i class="bi bi-plus-lg fs-1"></i>
                 </div>
             </a>
         </div>
@@ -31,10 +43,13 @@ function loadProductGrid(sectionId, books) {
     if (!section) return;
 
     let gridHTML = "<div class='row row-cols-1 row-cols-md-2 g-4'>";
+
+    gridHTML += createAddNewBookCard();
+
     books.forEach(book => {
         gridHTML += createHorizontalProductCard(book);
     });
-    gridHTML += "</div>";
 
+    gridHTML += "</div>";
     section.innerHTML = gridHTML;
 }

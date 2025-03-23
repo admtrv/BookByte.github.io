@@ -4,31 +4,60 @@ let bookId = null;
 
 document.addEventListener("DOMContentLoaded", () => {
     bookId = new URLSearchParams(window.location.search).get("id");
-    if (!bookId) return console.error("Book ID missing");
 
-    fetch("resources/database/books.json")
-        .then(res => res.json())
-        .then(data => {
-            const book = data.find(b => b.id == bookId);
-            if (!book) return console.error("Book not found");
-            fillForm(book);
-        })
-        .catch(err => console.error("Error loading book:", err));
+    const breadcrumbTitle = document.getElementById("bookTitleBreadcrumb");
+    const breadcrumbAction = document.getElementById("breadcrumbAction");
+    const deleteBtn = document.getElementById("deleteProductBtn");
+    const imagePreview = document.getElementById("imagePreview");
+
+    if (bookId) {
+        fetch("resources/database/books.json")
+            .then(res => res.json())
+            .then(data => {
+                const book = data.find(b => b.id == bookId);
+                if (!book) return console.error("Book not found");
+
+                fillForm(book);
+
+                document.getElementById("pageTitle").textContent = "Edit Product";
+                document.title = "Edit Product";
+
+                breadcrumbTitle.innerHTML = `
+                    <a href="product.html?id=${book.id}" class="text-decoration-none text-dark">
+                        ${book.title}
+                    </a>`;
+                breadcrumbAction.textContent = "Edit Product";
+            })
+            .catch(err => console.error("Error loading book:", err));
+    } else {
+        // New product
+        document.getElementById("pageTitle").textContent = "New Product";
+        document.title = "New Product";
+        breadcrumbTitle.remove();
+        breadcrumbAction.textContent = "New Product";
+
+
+        deleteBtn.innerHTML = 'Cancel <i class="fas fa-times ms-2"></i>';
+        imagePreview.innerHTML = "";
+        imagePreview.appendChild(createAddImageButton());
+    }
 
     document.getElementById("hiddenImageInput").addEventListener("change", handleNewImageUpload);
     document.getElementById("productForm").addEventListener("submit", handleSave);
-    document.getElementById("deleteProductBtn").addEventListener("click", handleDelete);
+    deleteBtn.addEventListener("click", handleDelete);
 });
 
+
 function fillForm(book) {
-    const setValue = (id, value) => document.getElementById(id).value = value;
-
+    document.getElementById("pageTitle").textContent = "Edit Product";
+    document.title = "Edit Product";
     document.getElementById("bookTitleBreadcrumb").innerHTML = `
-    <a href="product.html?id=${book.id}" class="text-decoration-none text-dark">
-      ${book.title}
-    </a>
-  `;
+        <a href="product.html?id=${book.id}" class="text-decoration-none text-dark">
+            ${book.title}
+        </a>
+    `;
 
+    const setValue = (id, value) => document.getElementById(id).value = value;
     setValue("productTitle", book.title);
     setValue("productAuthor", book.author);
     setValue("productDescription", book.description);
@@ -44,6 +73,21 @@ function fillForm(book) {
     });
 
     imagePreview.appendChild(createAddImageButton());
+}
+
+function setupNewProductForm() {
+    document.getElementById("pageTitle").textContent = "New Product";
+    document.title = "New Product";
+
+    document.getElementById("bookTitleBreadcrumb").innerHTML = `<span class="text-muted">New Product</span>`;
+    const imagePreview = document.getElementById("imagePreview");
+    imagePreview.innerHTML = "";
+    imagePreview.appendChild(createAddImageButton());
+
+    const cancelBtn = document.getElementById("deleteProductBtn");
+    cancelBtn.innerHTML = `Cancel <i class="fas fa-times ms-2"></i>`;
+    cancelBtn.classList.remove("btn-danger");
+    cancelBtn.classList.add("btn-danger");
 }
 
 function createImagePreview(src) {
@@ -96,22 +140,30 @@ function handleNewImageUpload(event) {
     const files = Array.from(event.target.files);
     const imagePreview = document.getElementById("imagePreview");
     const addButton = document.getElementById("addImageButton");
-  
+
     files.forEach(file => {
-      const reader = new FileReader();
-      reader.onload = e => {
-        const preview = createImagePreview(e.target.result);
-        imagePreview.insertBefore(preview, addButton);
-      };
-      reader.readAsDataURL(file);
+        const reader = new FileReader();
+        reader.onload = e => {
+            const preview = createImagePreview(e.target.result);
+            imagePreview.insertBefore(preview, addButton);
+        };
+        reader.readAsDataURL(file);
     });
 }
 
 function handleSave(e) {
     e.preventDefault();
-    window.location.href = `product.html?id=${bookId}`;
+    if (bookId) {
+        window.location.href = `product.html?id=${bookId}`;
+    } else {
+        window.location.href = "all-products.html";
+    }
 }
 
 function handleDelete() {
-    window.location.href = "index.html";
+    if (bookId) {
+        window.location.href = "index.html";
+    } else {
+        window.location.href = "all-products.html";
+    }
 }
