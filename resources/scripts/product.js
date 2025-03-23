@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function displayBookDetails(book) {
-    // Меняем заголовок страницы
     document.title = book.title;
 
     document.getElementById("bookTitle").textContent = book.title;
@@ -41,4 +40,7 @@ function displayBookDetails(book) {
     document.getElementById("bookImage1").alt = book.title + " - Front Cover";
     document.getElementById("bookImage2").src = book.image2;
     document.getElementById("bookImage2").alt = book.title + " - Back Cover";
+
+    document.querySelector("a[href='admin-page.html']").href = `admin-page.html?id=${book.id}`;
+
 }
