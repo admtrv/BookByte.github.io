@@ -92,27 +92,28 @@
                     <!-- Description -->
                     <p class="text-muted" id="bookDescription">Description</p>
 
-                    <ul class="list-inline mt-5 pt-4 d-flex flex-column flex-md-row align-items-md-center text-center text-md-start gap-3">
+                    <ul class="list-inline mt-5 pt-4 d-flex flex-row flex-wrap align-items-center justify-content-start text-center gap-3">
 
-                        <li class="list-inline-item d-flex flex-column flex-md-row align-items-md-center w-100 w-md-auto mb-0" style="white-space: nowrap;">
+                        <!-- Price -->
+                        <li class="list-inline-item">
+                            <h3 class="text-secondary fw-bold mb-0" id="bookPrice">0.00€</h3>
+                        </li>
 
-                            <!-- Price -->
-                            <h3 class="text-secondary fw-bold mb-0 me-md-4" id="bookPrice">0.00€</h3>
-
-                            <!-- In Stock -->
-                            <h6 id="bookStock" class="text-dark mb-0">In Stock 0 pcs</h6>
+                        <!-- In Stocks -->
+                        <li class="list-inline-item">
+                            <h6 class="text-dark mb-0" id="bookStock">In Stock 0 pcs</h6>
                         </li>
                     
                         <!-- Add to Cart -->
                         <li class="list-inline-item">
-                            <a href="#" class="btn btn-primary px-4 w-100" style="min-width: 200px;">
+                            <a href="#" class="btn btn-primary px-4 d-inline-block text-nowrap" style="min-width: 170px;">
                                 Add to Cart <i class="fas fa-shopping-cart ms-2"></i>
                             </a>
                         </li>
-                    
+
                         <!-- Edit Product -->
                         <li class="list-inline-item">
-                            <a href="admin-page.html" class="btn btn-primary px-4 w-100" style="min-width: 200px;">
+                            <a href="admin-page.html" class="btn btn-primary px-4 d-inline-block text-nowrap" style="min-width: 170px;">
                                 Edit Product <i class="fas fa-edit ms-2"></i>
                             </a>
                         </li>
