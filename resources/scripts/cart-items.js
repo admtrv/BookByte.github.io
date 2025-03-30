@@ -1,5 +1,11 @@
 // cart-items.js
 
+let cartItems = [
+    { id: 1, quantity: 2 },
+    { id: 2, quantity: 1 },
+    { id: 3, quantity: 1 }
+];
+
 document.addEventListener("DOMContentLoaded", function () {
     fetch("resources/database/books.json")
         .then(response => response.json())
@@ -12,14 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
 function loadCartItems(books) {
     const cartItemsContainer = document.getElementById("cart-items");
     cartItemsContainer.innerHTML = "";
-
-    const cartItems = [
-        { id: 1, quantity: 2 },
-        { id: 2, quantity: 1 },
-        { id: 3, quantity: 1 }
-    ];
-
-    let cartData = [];
 
     cartItems.forEach((cartItem) => {
         const book = books.find(b => b.id === cartItem.id);
@@ -58,12 +56,9 @@ function loadCartItems(books) {
             </div>
         `;
 
-
         cartItemsContainer.innerHTML += itemHTML;
-        cartData.push({ id: book.id, quantity: cartItem.quantity });
     });
 
-    localStorage.setItem("cart", JSON.stringify(cartData));
     updateTotal();
 }
 
@@ -74,28 +69,21 @@ function updateQuantity(itemId, change, maxStock) {
 
     if (newQty >= 1 && (!maxStock || newQty <= maxStock)) {
         qtyElement.textContent = newQty;
-        updateCartInStorage(itemId, newQty);
+
+        const item = cartItems.find(i => i.id === itemId);
+        if (item) item.quantity = newQty;
     }
 
     updateTotal();
 }
 
 function removeItem(itemId) {
-    document.getElementById(`cart-item-${itemId}`).remove();
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart = cart.filter(item => item.id !== itemId);
-    localStorage.setItem("cart", JSON.stringify(cart));
+    const itemEl = document.getElementById(`cart-item-${itemId}`);
+    if (itemEl) itemEl.remove();
+
+    cartItems = cartItems.filter(item => item.id !== itemId);
 
     updateTotal();
-}
-
-function updateCartInStorage(itemId, quantity) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    let itemIndex = cart.findIndex(item => item.id === itemId);
-    if (itemIndex !== -1) {
-        cart[itemIndex].quantity = quantity;
-    }
-    localStorage.setItem("cart", JSON.stringify(cart));
 }
 
 function updateTotal() {
@@ -116,4 +104,3 @@ function updateTotal() {
 
     document.getElementById("total-price").textContent = total.toFixed(2) + "€";
 }
-

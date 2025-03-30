@@ -75,21 +75,6 @@ function fillForm(book) {
     imagePreview.appendChild(createAddImageButton());
 }
 
-function setupNewProductForm() {
-    document.getElementById("pageTitle").textContent = "New Product";
-    document.title = "New Product";
-
-    document.getElementById("bookTitleBreadcrumb").innerHTML = `<span class="text-muted">New Product</span>`;
-    const imagePreview = document.getElementById("imagePreview");
-    imagePreview.innerHTML = "";
-    imagePreview.appendChild(createAddImageButton());
-
-    const cancelBtn = document.getElementById("deleteProductBtn");
-    cancelBtn.innerHTML = `Cancel <i class="fas fa-times ms-2"></i>`;
-    cancelBtn.classList.remove("btn-danger");
-    cancelBtn.classList.add("btn-danger");
-}
-
 function createImagePreview(src) {
     const wrapper = document.createElement("div");
     wrapper.className = "position-relative border rounded overflow-hidden";

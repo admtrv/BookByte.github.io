@@ -1,3 +1,5 @@
+// delivery-items.js
+
 document.addEventListener("DOMContentLoaded", function () {
     const deliveryOptions = document.querySelectorAll('input[name="deliveryMethod"]');
     const collapsibleSections = {

@@ -1,6 +1,6 @@
 # Front End Start-Up
 
-To allow all features work properly when opening `index.html` locally, you can run the project in one of two ways.
+To allow all features work properly when opening `index.html` locally, you can run the project in one of these ways:
 
 ## Launch Browser in Unsafe Mode
 
@@ -45,3 +45,10 @@ If you're using Visual Studio Code:
 3. Right-click `index.html` -> select `Open with Live Server`
 
 Live Server will automatically open the page in your browser and reload it on file changes.
+
+## Open Online Version
+You can also open the project directly in your browser using the GitHub-hosted version:
+
+https://admtrv.github.io/BookByte.github.io/
+
+This is the easiest way to preview the live version of the site without any setup.
